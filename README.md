@@ -22,6 +22,8 @@ Make sure that you've told rack to start the NewRelic agent:
 
     # config.ru
     require ::File.expand_path('../config/environment', __FILE__)
+    require 'newrelic_rpm'
+    require 'newrelic_lotus'
 
     # You need to manually start the agent
     NewRelic::Agent.manual_start
