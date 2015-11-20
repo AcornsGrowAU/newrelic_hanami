@@ -1,3 +1,5 @@
+[![Build Status](https://magnum.travis-ci.com/Acornsgrow/newrelic_lotus.svg?token=j8fT5VPY65oQ5xziayzW&branch=master)](https://magnum.travis-ci.com/Acornsgrow/newrelic_lotus)
+
 # NewRelic::Lotus
 
 NewRelic instrumentation for [Lotus](https://github.com/lotus/lotus).
