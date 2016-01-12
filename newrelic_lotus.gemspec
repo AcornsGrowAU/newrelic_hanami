@@ -24,5 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rack-test"
 
   spec.add_runtime_dependency 'newrelic_rpm'
-  spec.add_runtime_dependency 'lotus-controller', '~> 0.4.5'
+  spec.add_runtime_dependency 'lotus-controller', '~> 0.5.0'
 end
