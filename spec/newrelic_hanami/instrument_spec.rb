@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe NewRelic::Agent::Instrumentation::Lotus do
+describe NewRelic::Agent::Instrumentation::Hanami do
 
   let(:action_klass) do
     Class.new do
-      include Lotus::Action
+      include Hanami::Action
 
       def self.name
         "Foo::Bar:Controllers::Index"
@@ -21,7 +21,7 @@ describe NewRelic::Agent::Instrumentation::Lotus do
   describe '#call' do
     context 'when newrelic is not enabled' do
       it 'performs action without newrelic trace' do
-        ENV['DISABLE_NEW_RELIC_LOTUS'] = 'true'
+        ENV['DISABLE_NEW_RELIC_HANAMI'] = 'true'
         DependencyDetection.detect!
         expect(subject).not_to receive(:perform_action_with_newrelic_trace)
         code, headers, body = subject.call({})
@@ -30,7 +30,7 @@ describe NewRelic::Agent::Instrumentation::Lotus do
 
     context 'when newrelic is enabled' do
       it 'performs action with newrelic trace' do
-        ENV.delete('DISABLE_NEW_RELIC_LOTUS')
+        ENV.delete('DISABLE_NEW_RELIC_HANAMI')
         DependencyDetection.detect!
         expect(subject).to receive(:perform_action_with_newrelic_trace)
           .with(

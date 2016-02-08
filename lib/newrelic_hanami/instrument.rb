@@ -1,11 +1,11 @@
 require 'new_relic/agent/instrumentation'
 require 'new_relic/agent/instrumentation/controller_instrumentation'
-require 'lotus/controller'
+require 'hanami/controller'
 
 module NewRelic
   module Agent
     module Instrumentation
-      module Lotus
+      module Hanami
         include ControllerInstrumentation
 
         protected
@@ -33,20 +33,20 @@ module NewRelic
 end
 
 DependencyDetection.defer do
-  @name = :lotus
+  @name = :hanami
 
   depends_on do
-    defined?(::Lotus) && !::NewRelic::Control.instance['disable_lotus'] && !ENV['DISABLE_NEW_RELIC_LOTUS']
+    defined?(::Hanami) && !::NewRelic::Control.instance['disable_hanami'] && !ENV['DISABLE_NEW_RELIC_HANAMI']
   end
 
   executes do
-    NewRelic::Agent.logger.info 'Installing Lotus instrumentation'
+    NewRelic::Agent.logger.info 'Installing Hanami instrumentation'
   end
 
   executes do
-    ::Lotus::Controller.configure do
+    ::Hanami::Controller.configure do
       prepare do
-        prepend ::NewRelic::Agent::Instrumentation::Lotus
+        prepend ::NewRelic::Agent::Instrumentation::Hanami
       end
     end
   end
