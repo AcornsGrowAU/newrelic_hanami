@@ -1,14 +1,14 @@
-[![Build Status](https://magnum.travis-ci.com/Acornsgrow/newrelic_lotus.svg?token=j8fT5VPY65oQ5xziayzW&branch=master)](https://magnum.travis-ci.com/Acornsgrow/newrelic_lotus)
+[![Build Status](https://travis-ci.com/Acornsgrow/newrelic_hanami.svg?token=j8fT5VPY65oQ5xziayzW&branch=master)](https://travis-ci.com/Acornsgrow/newrelic_hanami)
 
-# NewRelic::Lotus
+# NewRelic::Hanami
 
-NewRelic instrumentation for [Lotus](https://github.com/lotus/lotus).
+NewRelic instrumentation for [Hanami](https://github.com/hanami/hanami).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'newrelic_lotus'
+    gem 'newrelic_hanami'
 
 And then execute:
 
@@ -16,28 +16,28 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install newrelic_lotus
+    $ gem install newrelic_hanami
 
 Make sure that you've told rack to start the NewRelic agent:
 
     # config.ru
     require ::File.expand_path('../config/environment', __FILE__)
     require 'newrelic_rpm'
-    require 'newrelic_lotus'
+    require 'newrelic_hanami'
 
     # You need to manually start the agent
     NewRelic::Agent.manual_start
 
-    run Lotus::Container.new
+    run Hanami::Container.new
 
 
 ## Usage
 
-Ensure that you have working NewRelic instrumentation. Add the `newrelic_lotus` gem. That's it.
+Ensure that you have working NewRelic instrumentation. Add the `newrelic_hanami` gem. That's it.
 
 ## Disabling Instrumentation
 
-Set `disable_lotus` in `newrelic.yml` or `ENV['DISABLE_NEW_RELIC_LOTUS']` to disable instrumentation.
+Set `disable_hanami` in `newrelic.yml` or `ENV['DISABLE_NEW_RELIC_HANAMI']` to disable instrumentation.
 
 ## Contributing
 

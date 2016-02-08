@@ -7,6 +7,6 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
 end
 
-require 'lotus/controller'
+require 'hanami/controller'
 require 'newrelic_rpm'
-require 'newrelic_lotus'
+require 'newrelic_hanami'
