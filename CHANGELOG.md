@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Support for Hanami::Controller 1.x
 
 ## [1.2.0] - 2016-02-08
 ### Added

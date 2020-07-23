@@ -24,5 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rack-test"
 
   spec.add_runtime_dependency 'newrelic_rpm'
-  spec.add_runtime_dependency 'hanami-controller', '~> 0.6'
+  spec.add_runtime_dependency 'hanami-controller', '>= 0.6', '< 2.0'
 end
