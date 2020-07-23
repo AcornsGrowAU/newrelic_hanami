@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
+
+## [1.2.1] - 2020-07-23
+### Added
 - Support for Hanami::Controller 1.x
 
 ## [1.2.0] - 2016-02-08
